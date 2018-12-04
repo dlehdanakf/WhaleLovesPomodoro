@@ -2,15 +2,21 @@
   "name": "WhaleLovesPomodoro",
   "version": "1.0.0",
   "description": "The fancy timer about Pomodoro technique for help you to improve your concentration",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/dlehdanakf/WhaleLovesPomodoro.git"
+  },
   "main": "background.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production --module-bind js=babel-loader",
     "start": "webpack-dev-server --mode development --open"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["tomato", "pomodoro", "timer", "React", "whale", "extension"],
+  "author": "DongHyun LEE",
+  "email" : "dlehdanakf@konkuk.ac.kr",
+  "url" : "https://github.com/dlehdanakf",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
