@@ -27,7 +27,7 @@ class App extends React.Component {
             _siteList = [];
 
         this.loading_timer = {
-            timerId: 0, delay: 1000, limit: 5
+            timerId: 0, delay: 1000, limit: 10
         };
         this.recurring_timer = {
             timerId: 0, start: new Date(), remaining: 1000, delay: 1000
@@ -249,7 +249,7 @@ class App extends React.Component {
         this.setState({ currentSeconds: n });
 
         if(this.state.status == 'run') {
-            if(this.state.mode == 'break' && this.state.relaxLimitSeconds - n == 50){
+            if(this.state.mode == 'break' && this.state.relaxLimitSeconds - n == 60){
                 window.tomato.invokeNotification('쉬는시간 종료 임박', '쉬는시간 종료까지 1분 남았습니다. 정리하세요!');
             }
 
