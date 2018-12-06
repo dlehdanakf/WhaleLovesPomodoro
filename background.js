@@ -100,7 +100,7 @@ chrome.runtime.onMessage.addListener(function(message, sender){
     var d = decoded.data;
 
     switch(decoded.type){
-        case 'notification': invokeNotificationMessage(d.title, d.message, d.icon); return;
+        case 'notification': invokeNotificationMessage(d.title, d.message, d.icon, d.ringtone); return;
         case 'updateApplicationStatus': updateApplicationStatus(d); return;
         case 'validateURL': validateURL(d.link); return;
     }

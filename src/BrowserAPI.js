@@ -21,13 +21,14 @@ const getTodayDate = () => {
 };
 
 const showAlert = e => alert(e);
-const invokeNotification = (t, m, i) => {
+const invokeNotification = (t, m, i, r) => {
     chrome.runtime.sendMessage(chrome.runtime.id, JSON.stringify({
         type: 'notification',
         data: {
             title: t,
             message: m,
-            icon: i
+            icon: i,
+            ringtone: r
         }
     }));
 };
