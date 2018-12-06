@@ -210,7 +210,7 @@ class App extends React.Component {
     onTimerFinished(){
         if(this.state.mode == 'work' && this.state.isRewarded === false){
             let x = this.rewardTomato();
-            window.tomato.invokeNotification('【 집중시간 】 타이머 종료', (x ? '(토마토 +1) ' : '') + '5초 뒤 타이머 모드가 \'휴식\'으로 변경됩니다.');
+            window.tomato.invokeNotification('【 집중시간 】 타이머 종료', (x ? '(토마토 +1) ' : '') + '10초 후 타이머 모드가 \'휴식\'으로 변경됩니다.');
         } else if(this.state.mode == 'break') {
             window.tomato.invokeNotification('【 쉬는시간 】 타이머 종료', '5초 뒤 타이머 모드가 \'집중\'으로 변경됩니다.');
         }
