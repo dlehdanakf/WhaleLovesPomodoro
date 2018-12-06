@@ -271,8 +271,7 @@ class App extends React.Component {
         window.tomato.setAsyncStorage({ workLimitSeconds: workLimitSeconds });
     }
     decreaseWorkLimitSeconds(){
-        // if(this.state.workLimitSeconds <= 600) return;
-        if(this.state.workLimitSeconds <= 60) return;
+        if(this.state.workLimitSeconds <= 600) return;
 
         const workLimitSeconds = this.state.workLimitSeconds - 60;
         this.setState({ workLimitSeconds: workLimitSeconds });
@@ -286,8 +285,7 @@ class App extends React.Component {
         window.tomato.setAsyncStorage({ relaxLimitSeconds: relaxLimitSeconds });
     }
     decreaseRelaxLimitSeconds(){
-        // if(this.state.relaxLimitSeconds <= 180) return;
-        if(this.state.relaxLimitSeconds <= 60) return;
+        if(this.state.relaxLimitSeconds <= 180) return;
 
         const relaxLimitSeconds = this.state.relaxLimitSeconds - 60;
         this.setState({ relaxLimitSeconds: relaxLimitSeconds });
