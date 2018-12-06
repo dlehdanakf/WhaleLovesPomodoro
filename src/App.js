@@ -199,7 +199,7 @@ class App extends React.Component {
         ) {
             if(this.state.status !== 'loading' && this.state.mode == 'work' && this.state.isFresh) {
                 this.rewardTomato(true);
-                window.tomato.invokeNotification('토마토가 시들었어요 ㅠㅠ', '집중시간에 타이머를 종료하여 완전한 토마토를 획득하지 못했습니다.', 'pomodoro_rotten.png');
+                window.tomato.invokeNotification('토마토가 시들었어요 ㅠㅠ', '집중시간에 타이머를 종료하여 완전한 토마토를 획득하지 못했습니다.', 'pomodoro_rotten.png', true);
             }
 
             this.setState({ status: 'stop', currentSeconds: 0, isRewarded: false, isFresh: true, showHarvest: false }, () => { window.tomato.sendApplicationStatus(this.state) });
@@ -212,7 +212,7 @@ class App extends React.Component {
             let x = this.rewardTomato();
             window.tomato.invokeNotification('【 집중시간 】 타이머 종료', (x ? '(토마토 +1) ' : '') + '10초 후 타이머 모드가 \'휴식\'으로 변경됩니다.');
         } else if(this.state.mode == 'break') {
-            window.tomato.invokeNotification('【 쉬는시간 】 타이머 종료', '5초 뒤 타이머 모드가 \'집중\'으로 변경됩니다.');
+            window.tomato.invokeNotification('【 쉬는시간 】 타이머 종료', '10초 후 타이머 모드가 \'집중\'으로 변경됩니다.', 'pomodoro_normal.png', true);
         }
 
         this.timerStop();
@@ -238,9 +238,9 @@ class App extends React.Component {
         this.timerResume();
 
         if(nextState.mode == 'work'){
-            window.tomato.invokeNotification('【 집중시간 】 타이머 시작', '집중하여 최고의 업무효율에 도전하고 토마토를 획득하세요!');
+            window.tomato.invokeNotification('【 집중시간 】 타이머 시작', '집중하여 최고의 업무효율에 도전하고 토마토를 획득하세요!', 'pomodoro_normal.png', true);
         } else {
-            window.tomato.invokeNotification('【 쉬는시간 】 타이머 시작', '쉬는시간 동안 다음 집중을 위해 머리도 식히고 스트레칭도 해보세요!');
+            window.tomato.invokeNotification('【 쉬는시간 】 타이머 시작', '쉬는시간 동안 다음 집중을 위해 머리도 식히고 스트레칭도 해보세요!', 'pomodoro_normal.png', true);
         }
     }
 
@@ -377,7 +377,7 @@ class App extends React.Component {
 
         this.rewardTomato(true);
         this.setState({ isFresh: false, isRewarded: true })
-        window.tomato.invokeNotification('토마토가 시들었어요 ㅠㅠ', message, 'pomodoro_rotten.png');
+        window.tomato.invokeNotification('토마토가 시들었어요 ㅠㅠ', message, 'pomodoro_rotten.png', true);
     }
 }
 

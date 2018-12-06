@@ -24,7 +24,7 @@ function onBrowserStateChanged(newState){
     }
 }
 
-function invokeNotificationMessage(title, message, icon){
+function invokeNotificationMessage(title, message, icon, ringtone){
     var _icon = icon,
         _title = title,
         _message = message;
@@ -43,6 +43,12 @@ function invokeNotificationMessage(title, message, icon){
             message: _message
         }
     );
+
+    if(ringtone){
+        var myAudio = new Audio();
+        myAudio.src = chrome.runtime.getURL('./ringtone.mp3');
+        myAudio.play();
+    }
 }
 function updateApplicationStatus(d){
     applicationEnvironment = {
