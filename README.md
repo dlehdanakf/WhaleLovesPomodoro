@@ -4,6 +4,9 @@ Whale loves Pomodro
 
 <img src="./dist/images/whale_contest.png" alt="Pomodoro" style="height: 12px; margin-right: 4px" /> 웨일 확장 앱 콘테스트 출품작입니다.
 
+![Release](https://img.shields.io/github/release/dlehdanakf/WhaleLovesPomodoro.svg)
+![NAVER](https://img.shields.io/badge/platform-NAVER%20whale-green.svg)
+![NPM](https://img.shields.io/badge/npm-v6.4.1-blue.svg)
 ![GitHub](https://img.shields.io/github/license/dlehdanakf/WhaleLovesPomodoro.svg)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-%23ff69b4.svg)
 
