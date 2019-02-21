@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Whale loves Pomodoro",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The fancy timer about Pomodoro technique for help you to improve your concentration",
   "icons": {
     "16": "images/logo_16.png",
