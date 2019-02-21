@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "The fancy timer about Pomodoro technique for help you to improve your concentration",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/dlehdanakf/WhaleLovesPomodoro.git"
+    "type": "git",
+    "url": "https://github.com/dlehdanakf/WhaleLovesPomodoro.git"
   },
   "main": "background.js",
   "scripts": {
@@ -12,10 +12,17 @@
     "build": "webpack --mode production --module-bind js=babel-loader",
     "start": "webpack-dev-server --mode development --open"
   },
-  "keywords": ["tomato", "pomodoro", "timer", "React", "whale", "extension"],
+  "keywords": [
+    "tomato",
+    "pomodoro",
+    "timer",
+    "React",
+    "whale",
+    "extension"
+  ],
   "author": "DongHyun LEE",
-  "email" : "dlehdanakf@konkuk.ac.kr",
-  "url" : "https://github.com/dlehdanakf",
+  "email": "dlehdanakf@konkuk.ac.kr",
+  "url": "https://github.com/dlehdanakf",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -36,11 +43,11 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.2.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "chrome-extension-async": "^3.3.0",
+    "chrome-extension-async": "^3.3.2",
     "domain-match": "^1.0.0",
     "react-countup": "^4.0.0"
   }
